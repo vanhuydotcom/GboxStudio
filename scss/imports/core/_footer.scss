@@ -1,0 +1,97 @@
+// css footer
+footer {
+    .container {
+        .line {
+            content: "";
+            padding-bottom: 60px;
+            width: 100%;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                background: #000;
+                width: 100%;
+                height: 1px;
+            }
+        }
+    }
+    .ftBottom {
+        background: $footer-bg-cl;
+        flex-direction: column-reverse;
+        margin: 0;
+        margin-top: -1px;
+        padding: 70px 0;
+        p {
+            font-size: 10px;
+            color: $text-cl;
+            font-family: pr;
+            padding-top: 20px;
+        }
+    }
+    .ftItem {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            grid-gap: 20px;
+            .des {
+                padding: 10px 0;
+                text-transform: uppercase;
+                font-size: 12px;
+            }
+            .-gap {
+                height: 36px;
+            }
+        }
+    }
+    .bg-yl {
+        background: $footer-bg-cl;
+        padding-top: 30px;
+    }
+}
+@include lg {
+    // CSS responsive large desktop
+}
+@include md {
+    // CSS responsive desktop
+}
+@include sm {
+    // CSS responsive tablet
+}
+@include xs {
+    // CSS responsive mobile
+    footer {
+        .ftBottom {
+            padding-top: 50px;
+            padding-bottom: 150px;
+        }
+        .ftItem {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+                text-align: center;
+                grid-gap: 0;
+                .text01 {
+                    .-gap {
+                        display: none;
+                    }
+                }
+                .text02 {
+                    display: none;
+                }
+            }
+        }
+        .bg-yl {
+            background: unset;
+            padding-top: 0;
+            padding-bottom: 40px;
+
+            .ftform {
+                display: none;
+            }
+        }
+    }
+}
+
+@include xxs {
+    // CSS responsive small mobile
+}

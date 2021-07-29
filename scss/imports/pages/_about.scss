@@ -1,0 +1,96 @@
+.about-us {
+    padding-top: 140px;
+    background: url(../img/bg-about.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.about {
+    padding: var(--pd);
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .title {
+        font-size: 36px;
+        line-height: 58px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: $footer-bg-cl;
+        font-family: pb;
+    }
+    .des {
+        padding-top: 40px;
+        font-size: 18px;
+        line-height: 40px;
+        letter-spacing: -0.25px;
+        color: #f4f4f4;
+    }
+    .booknow {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 0;
+        padding-top: 0px;
+        img {
+            border-radius: 10%;
+        }
+        .des {
+            padding-bottom: 90px;
+            text-align: left;
+            padding-left: 20px;
+        }
+    }
+}
+@include lg {
+    // CSS responsive large desktop
+}
+@include md {
+    // CSS responsive desktop
+}
+@include sm {
+    // CSS responsive tablet
+}
+@include xs {
+    // CSS responsive mobile
+    .about-us {
+        padding-top: 0;
+        background: url(../img/bg-about-mb.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        // background-attachment: fixed;
+        .about {
+            // // padding: var(--pd);
+            // padding-top: 100px;
+            // padding-left: 20px;
+            // padding-right: 20px;
+            .title {
+                margin-left: -10px;
+                font-size: 25px;
+                line-height: 58px;
+                letter-spacing: 6px;
+                text-transform: uppercase;
+                color: $footer-bg-cl;
+                font-family: pb;
+            }
+            .des {
+                padding-top: 2px;
+                font-size: 16px;
+                line-height: 34px;
+                letter-spacing: -0.25px;
+                color: #f4f4f4;
+            }
+            .booknow {
+                padding-top: 30px;
+                .des {
+                    padding-bottom: 50px;
+                    text-align: left;
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}
+@include xxs {
+    // CSS responsive small mobile
+}

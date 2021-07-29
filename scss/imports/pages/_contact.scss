@@ -1,0 +1,119 @@
+.contact-us {
+    padding: $paddingHeader;
+    background: url(../img/bg-contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .contact {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__text {
+            text-transform: uppercase;
+            padding-top: 40px;
+            padding-bottom: 70px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: flex-start;
+            &-textbox {
+                padding: 0 30px;
+                text-align: left;
+                color: #fff;
+                font-size: 12px;
+                line-height: 30.5px;
+                .-gap {
+                    height: 30.5px;
+                }
+            }
+            .left {
+                text-align: right;
+            }
+        }
+        .svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+.footer-contact {
+    .ftItem {
+        margin-top: -120px;
+        .ftform {
+            padding-top: 0;
+            margin-top: -13px;
+        }
+    }
+}
+@include lg {
+    // CSS responsive large desktop
+}
+@include md {
+    // CSS responsive desktop
+}
+@include sm {
+    // CSS responsive tablet
+}
+@include xs {
+    // CSS responsive mobile
+    .contact-us {
+        padding: $paddingHeader;
+        background: url(../img/bg-contact-mb.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: unset;
+
+        .contact {
+            padding-top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .logo-contact {
+                display: none;
+            }
+            &__text {
+                text-transform: uppercase;
+                padding-top: 0;
+                padding-bottom: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &-textbox {
+                    padding: 0 30px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 12px;
+                    line-height: 30.5px;
+                }
+
+                .left {
+                    text-align: center;
+                }
+            }
+            .svg {
+                display: none;
+            }
+        }
+    }
+    .footer-contact {
+        .ftItem {
+            margin-top: 0;
+            padding-bottom: 0;
+            .ftform {
+                padding-top: 0;
+                margin-top: -13px;
+            }
+        }
+    }
+}
+@include xxs {
+    // CSS responsive small mobile
+}

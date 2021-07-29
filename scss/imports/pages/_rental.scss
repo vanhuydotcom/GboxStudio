@@ -1,0 +1,249 @@
+.rentalpage {
+    padding: $paddingHeader;
+    .rental {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &__title {
+            min-height: 640px;
+            padding-top: 80px;
+            background: #545454;
+            color: #fff;
+            .square {
+                .des {
+                    padding-bottom: 0;
+                }
+            }
+            .title {
+                font-size: 28px;
+                font-family: pb;
+                line-height: 30.5px;
+                letter-spacing: -0.25px;
+                padding: 30px 0;
+            }
+            .des {
+                padding-bottom: 15px;
+            }
+        }
+        &__form {
+            padding-top: 80px;
+            padding-left: 50px;
+            .formRental {
+                width: 100%;
+                .title {
+                    font-size: 28px;
+                    font-family: pb;
+                    line-height: 30.5px;
+                    color: #39382f;
+                    letter-spacing: -0.25px;
+                    padding-bottom: 15px;
+                }
+                label {
+                    width: 100%;
+                    p {
+                        padding-top: 25px;
+                    }
+                    input {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid $text-cl;
+                        outline: none;
+                    }
+                    textarea {
+                        width: 100%;
+                        height: 90px;
+                        border: 1px solid #39382f;
+                        margin-top: 30px;
+                        outline: none;
+                    }
+                }
+                &__company {
+                    display: flex;
+                    gap: 80px;
+                    &-left {
+                        width: 100%;
+                    }
+                    &-right {
+                        width: 100%;
+                    }
+                }
+                .choice {
+                    display: flex;
+                    li {
+                        border: 1px solid #39382f;
+                        padding: 12px;
+                        margin-right: 20px;
+                        margin-top: 20px;
+                        background: #111111;
+                        color: #fff;
+                        font-family: pb;
+                        font-size: 24px;
+                        letter-spacing: -0.25px;
+                        &:hover,
+                        &.active {
+                            background: $footer-bg-cl;
+                            color: #39382f;
+                        }
+                    }
+                }
+                &__booking {
+                    &-top {
+                        display: flex;
+                        gap: 80px;
+                        .des {
+                            font-size: 12px;
+                            padding-top: 0;
+                            font-style: italic;
+                        }
+                    }
+                    &-middle {
+                        p {
+                            padding-bottom: 20px;
+                        }
+                        label {
+                            display: flex;
+                            flex-direction: row;
+                            width: 100%;
+                            .nextsibling {
+                                width: 22px;
+                                height: 22px;
+                                margin: 10px 29px;
+                            }
+
+                            div {
+                                display: flex;
+                                width: 100%;
+
+                                border: 1px solid;
+                                input[type="date"]::-webkit-inner-spin-button {
+                                    display: none;
+                                }
+
+                                input[type="date"]::-webkit-calendar-picker-indicator {
+                                    background: none;
+                                    padding: 0;
+                                }
+                                input {
+                                    width: 100%;
+                                    border: none;
+                                    padding: 10px 15px;
+                                }
+
+                                img {
+                                    padding: 10px 15px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    &-bottom {
+                        p {
+                            padding-bottom: 20px;
+                        }
+                        label {
+                            div {
+                                height: 37px;
+                                border: 1px solid;
+                                input {
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-rental {
+                border: none;
+                outline: none;
+                background: unset;
+                flex-direction: row-reverse;
+                margin-bottom: -60px;
+                padding-top: 65px;
+                cursor: pointer;
+                .des {
+                    text-align: left;
+                    padding-left: 20px;
+                    span {
+                        font-family: pb;
+                    }
+                }
+            }
+        }
+    }
+    @include sm {
+        // CSS responsive tablet
+        .rental {
+            &__form {
+                .formRental {
+                    &__company {
+                        gap: 50px;
+                        &__booking {
+                            gap: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include xs {
+        // CSS responsive mobile
+        padding: 100px 0;
+        .rental {
+            flex-direction: column;
+            align-items: center;
+            &__title {
+                display: flex;
+                min-height: unset;
+                padding-top: 0;
+                background: unset;
+                color: $text-cl;
+                max-width: 100%;
+                padding-left: 0;
+
+                .square {
+                    margin-right: 30px;
+                }
+
+                &-textbox {
+                    .title {
+                        padding: 0;
+                        padding-bottom: 20px;
+                    }
+                    .des {
+                        padding-bottom: 0;
+                    }
+                    .hidden-note {
+                        display: none;
+                    }
+                }
+            }
+            &__form {
+                max-width: 100%;
+                padding-top: 0;
+                padding-left: 0;
+                .formRental {
+                    .title {
+                        padding-top: 30px;
+                    }
+                    &__company {
+                        display: block;
+                    }
+                    &__booking {
+                        &-top {
+                            display: block;
+                        }
+                        &-middle {
+                            label {
+                                display: block;
+                                .nextsibling {
+                                    transform: rotate(90deg);
+                                    margin: 10px 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

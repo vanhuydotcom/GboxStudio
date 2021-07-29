@@ -1,0 +1,38 @@
+// css navigator (Menu)
+.nav {
+    width: 100vw;
+    height: 100vh;
+    background: $black-bg-cl;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // pointer-events: none;
+    @include transform(initial);
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(opacity 0.3s);
+    ul {
+        text-align: center;
+        flex-direction: column;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        text-transform: uppercase;
+        li {
+            padding-top: 40px;
+            a {
+                color: #fff;
+
+                text-decoration: none;
+                font-size: 30px;
+            }
+        }
+    }
+    &.active {
+        opacity: 1;
+        visibility: initial;
+        @include transition(0.3s);
+    }
+}

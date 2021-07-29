@@ -1,0 +1,223 @@
+.studios-detail {
+    padding-top: 70px;
+    .studio-detail {
+        padding-bottom: 110px;
+    }
+    .detail__top {
+        padding: 20px 0;
+        padding-top: 40px;
+        .title {
+            visibility: hidden;
+        }
+    }
+    .detail__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        .btndl {
+            p {
+                padding-right: 35px;
+            }
+        }
+        .btnfs {
+            p {
+                padding-right: 0;
+            }
+        }
+        .btnSlider {
+            &__prev {
+                margin-left: 50px;
+            }
+        }
+    }
+    .pricing {
+        &__item {
+            position: relative;
+            display: flex;
+            padding-bottom: 50px;
+            &-pricetable {
+                width: 50%;
+                .title {
+                    color: #39382f;
+                    font-size: 32px;
+                    font-family: pb;
+                    padding-bottom: 20px;
+                }
+                .des {
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding-bottom: 30px;
+                    span {
+                        color: #39382f;
+                        font-family: pb;
+                    }
+                }
+                .pricetab {
+                    width: 100%;
+                    border: 1px solid;
+                    td {
+                        padding: 20px 0;
+                        border-bottom: 1px solid;
+                        padding-left: 60px;
+                        padding-right: 20px;
+                    }
+                    .cl2 {
+                        text-align: right;
+                    }
+                }
+            }
+            &-floorplan {
+                padding-left: 60px;
+                .title {
+                    color: #39382f;
+                    font-size: 32px;
+                    font-family: pb;
+                    padding-bottom: 90px;
+                }
+            }
+            &-specsleft {
+                width: 50%;
+                .title {
+                    color: #39382f;
+                    font-size: 32px;
+                    font-family: pb;
+                    padding-bottom: 20px;
+                }
+                .des {
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding-bottom: 30px;
+                }
+            }
+            &-specsright {
+                padding-top: 52px;
+                padding-left: 60px;
+                .des {
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding-bottom: 30px;
+                }
+            }
+            &::before {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: black;
+                position: absolute;
+                margin-top: -30px;
+            }
+        }
+    }
+    .booknow {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 70px;
+        padding-top: 0;
+        .svg {
+            width: 16px;
+            height: 16px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@include lg {
+    // CSS responsive large desktop
+}
+@include md {
+    // CSS responsive desktop
+}
+@include sm {
+    // CSS responsive tablet
+    .studios-detail {
+        .pricing {
+            &__item {
+                &-pricetable {
+                    .pricetab {
+                        td {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include xs {
+    // CSS responsive mobile
+    .studios-detail {
+        .studio-detail {
+            padding-bottom: 40px;
+            padding-top: 0;
+        }
+        .detail__bottom {
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: start;
+            &-text {
+                margin-top: 0;
+                padding-left: 30px;
+            }
+            .btndl {
+                display: none;
+            }
+            .btnfs {
+                display: none;
+            }
+            .btnSlider {
+                display: none;
+            }
+        }
+        .pricing {
+            &__item {
+                flex-direction: column;
+                padding-bottom: 30px;
+                &-pricetable {
+                    width: 100%;
+                    .des {
+                        width: 230px;
+                    }
+                    .pricetab {
+                        td {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+                &-floorplan {
+                    padding-left: 0;
+                    padding-top: 30px;
+                    .title {
+                        padding-bottom: 20px;
+                    }
+                    img {
+                        width: 100vw;
+                    }
+                }
+                &-specsleft {
+                    .des {
+                        padding-bottom: 20px;
+                    }
+                }
+                &-specsright {
+                    padding-top: 0;
+                    padding-left: 0;
+                    .des {
+                        padding-bottom: 20px;
+                    }
+                }
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include xxs {
+    // CSS responsive small mobile
+}

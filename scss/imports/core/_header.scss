@@ -1,0 +1,116 @@
+// css header
+.header {
+    font-family: pb;
+    width: 100%;
+    position: fixed;
+    z-index: 800;
+    transition: 0.7s;
+    .bg-gray {
+        background: $gray-bg-cl;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo {
+                // left: 0;
+                // transform: translateX(-50%);
+                padding: 15px 0;
+            }
+            // h1 {
+            //     color: $gray-bg-cl;
+            // }
+            .logo-fb {
+                width: 10px;
+                height: 20px;
+                cursor: pointer;
+            }
+            .svg {
+                * {
+                    fill: #000;
+                }
+            }
+        }
+    }
+    .bg-while {
+        background: #fff;
+        .bottom {
+            position: relative;
+            height: 100%;
+            ul {
+                outline: none;
+                height: 100%;
+                padding-top: 40px;
+                padding-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li {
+                    outline: none;
+                    height: 100%;
+                    a {
+                        outline: none;
+                        height: 100%;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        color: $text-cl;
+                    }
+                }
+
+                .left {
+                    padding-right: 20%;
+                }
+                .right {
+                    padding-left: 20%;
+                }
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                background: #000;
+                width: 100%;
+                height: 1px;
+            }
+        }
+    }
+    &.is-hidden {
+        transition: 0.7s;
+        transform: translateY(-50%);
+    }
+}
+@include lg {
+    // CSS responsive large desktop
+}
+@include md {
+    // CSS responsive desktop
+}
+@include sm {
+}
+@include xs {
+    // CSS responsive mobile
+
+    .header {
+        --headerHeigh: 40px;
+        .bottom {
+            display: none;
+        }
+        .nav {
+            display: block;
+        }
+        .bg-gray {
+            .top {
+                height: 60px;
+                .logo {
+                    @include transform(scale(0.7));
+                }
+            }
+        }
+        &.is-hidden {
+            transition: 0.7s;
+            transform: translateY(0%);
+        }
+    }
+}
+@include xxs {
+    // CSS responsive small mobile
+}
